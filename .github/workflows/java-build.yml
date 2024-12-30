@@ -1,0 +1,29 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'  
+        distribution: 'temurin'  
+
+    - name: Compile Java code
+      run: |
+        javac -d out oop-java-donkorBN/Classes/**/*.java
+       
+
+    - name: Run tests
+      run: |
+        java -cp out org.junit.runner.JUnitCore oop-java-donkorBN.Classes.Vehicle oop-java-donkorBN.Classes.Admin oop-java-donkorBN.Classes.Customer
