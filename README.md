@@ -153,3 +153,5 @@ Each vehicle class must implement unique:
 - Documentation: 5%
 
 Good luck, and happy coding-Joe!
+
+Student Name: Asiamah Emmanuel Donkor
